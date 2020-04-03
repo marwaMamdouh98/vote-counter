@@ -14,13 +14,13 @@ class App extends Component{
     ]
   };
 
- change = () => {this.setState({ vote: this.state.voteItems[0] + 1 })}
+ //change = () => {this.setState({ vote: this.state.voteItems.vote + 1 })}
  
   render(){
     return (
       <div className="app">
       <Vote voteItems={this.state.voteItems}/>
-      <button onClick={this.change} className="voteBtn">click here</button>
+      
       </div>
     );
   }

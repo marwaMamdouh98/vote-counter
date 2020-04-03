@@ -3,14 +3,14 @@ import React , {Component} from 'react';
 
 class Vote extends Component{
     
-   /* state =
-        {count: this.props.vote};
+    state =
+        {count: this.props.voteItems.vote};
     
         change = () =>{
             this.setState({
-                count: this.state.number + 1 
+                count: this.state.count + 1 
             })
-        }*/
+        }
     
     
     render(){
@@ -25,6 +25,7 @@ class Vote extends Component{
                 <div className="voteName">
                     <h2 >{item.name}</h2>
                 </div>
+                <button onClick={this.change} className="voteBtn">click here</button>
             </div>
             )
         })
