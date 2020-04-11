@@ -7,25 +7,26 @@ class App extends Component{
 // create state for save data ..
   state = {
     voteItems:[
-      {id:1, name:"PHP", vote : 1},
-      {id:2, name:"Python" ,vote : 0},
-      {id:3, name:"Go" ,vote : 0},
-      {id:4, name:"Java" ,vote : 0}
+      {id:1, name:"PHP", votes : 1},
+      {id:2, name:"Python" ,votes : 0},
+      {id:3, name:"Go" ,votes : 0},
+      {id:4, name:"Java" ,votes : 0}
     ]
   };
 
- //change = () => {this.setState({ vote: this.state.voteItems.vote + 1 })}
  
   render(){
     return (
       <div className="app">
-      <Vote voteItems={this.state.voteItems}/>
-      
+        {this.state.voteItems.map((items) => 
+          <Vote key={items.id} votes={items.votes} name={items.name}/>
+        )}
+     
       </div>
     );
   }
 }
   
-
+//<Vote voteItems={this.state.voteItems}/>
 
 export default App;

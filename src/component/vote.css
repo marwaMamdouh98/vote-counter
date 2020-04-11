@@ -19,5 +19,10 @@
 }
 .voteBtn{
 padding: 15px;
+border-radius: 5px;
+background-color: whitesmoke;
 }
-
+.voteBtn:hover{
+    background-color: #990d45;
+    color: white;
+}
